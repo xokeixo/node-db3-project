@@ -59,11 +59,11 @@ async function add(scheme) {
   })
 }
 
-// async function addStep(scheme_id, step) { 
-//   await db("steps").insert({ scheme_id, ...step });
-//   const steps = await findSteps(scheme_id);
-//   return steps;
-// };
+async function addStep(scheme_id, step) { 
+  await db("steps").insert({ scheme_id, ...step });
+  const steps = await findSteps(scheme_id);
+  return steps;
+}
 
 
 module.exports = {
